@@ -113,15 +113,15 @@ footer {
 				{% csrf_token %}
 				<label for="age">Age:</label>
 				<input type="number" name="age" id="age" required>
-				<label for="bmi">BMI:</label>
+				<label for="bmi">BMI: Generaly between 18.5 to 24.9</label>
 				<input type="number" name="bmi" id="bmi" step="0.1" required>
-				<label for="glucose">Glucose Level:</label>
+				<label for="glucose">Glucose Level: Generaly below 180 for children and below 130 for adults</label>
 				<input type="number" name="glucose" id="glucose" required>
-				<label for="bp">Blood Pressure:</label>
+				<label for="bp">Blood Pressure: Generaly below 120</label>
 				<input type="number" name="bp" id="bp" required>
-				<label for="skin">Skin Thickness:</label>
+				<label for="skin">Skin Thickness: Generaly varies from 10 to 40</label>
 				<input type="number" name="skin" id="skin" required>
-				<label for="insulin">Insulin Level:</label>
+				<label for="insulin">Insulin Level: Generaly below 20 on diet and below 60 after meal</label>
 				<input type="number" name="insulin" id="insulin" required>
 				<button type="submit">Predict</button>
 			</form>
