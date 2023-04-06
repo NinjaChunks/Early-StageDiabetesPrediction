@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Early-Stage Diabetes Prediction</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+	* {
+	box-sizing: border-box;
+}
+
+html {
+	overflow: hidden;
+}
+html:hover {
+    overflow: auto;
+}
+
+body {
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+nav ul li {
+	margin: 0 10px;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+main {
+	padding: 20px;
+}
+
+section {
+	margin: 50px 0;
+}
+
+h2 {
+	text-align: center;
+}
+
+form label {
+	display: inline-block;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+form input[type="number"], form select {
+	display: block;
+	margin-bottom: 20px;
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: none;
+	background-color: #f7f7f7;
+	width: 100%;
+}
+
+form button {
+	display: block;
+	margin: 0 auto;
+	padding: 10px 20px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: none;
+	background-color: #333;
+	color: white;
+}
+
+footer{
+	position: fixed;
+
+}
+
+p{
+    padding: 20px;
+}
+
+</style>
+</head>
+<body>
+	<header>
+		<h1>Early-Stage Diabetes Prediction</h1>
+		<nav>
+			<ul>
+				<li><a href="{% url 'home' %}">Home</a></li>
+				<li><a href="{% url 'about' %}">About</a></li>
+				<li><a href="{% url 'contact' %}">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+    <section>
+        <h2>Diabetes</h2>
+        <p style="text-align: justify;">Diabetes Mellitus is among critical diseases and lots of people are suffering from this disease. Age, obesity, lack of exercise, hereditary diabetes, living style, bad diet, high blood pressure, etc. can cause Diabetes Mellitus. People having diabetes have high risk of diseases like heart disease, kidney disease, stroke, eye problem, nerve damage, etc. Current practice in hospital is to collect required information for diabetes diagnosis through various tests and appropriate treatment is provided based on diagnosis. Big Data Analytics plays an significant role in healthcare industries. Healthcare industries have large volume databases. Using big data analytics huge datasets can be studied and can find hidden information, hidden patterns to discover knowledge from the data and predict outcomes accordingly. The classification and prediction accuracy is not so high. A model for diabetes prediction can be proposed for better classification of diabetes which includes few external factors responsible for diabetes along with regular factors like Glucose, BMI, Age, Insulin, etc. Classification accuracy can be boosted with new dataset compared to existing dataset. Further a pipeline model for diabetes prediction intends towards improving the accuracy of classification.  
+        </p>
+    </section>
+</body>
+</html>

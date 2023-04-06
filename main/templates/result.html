@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Early-Stage Diabetes Prediction</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+	* {
+	box-sizing: border-box;
+}
+
+html {
+	overflow: hidden;
+}
+html:hover {
+    overflow: auto;
+}
+
+
+body {
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+nav ul li {
+	margin: 0 10px;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+main {
+	padding: 20px;
+}
+
+section {
+	margin: 50px 0;
+}
+
+h2 {
+	text-align: center;
+}
+
+form label {
+	display: inline-block;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+form input[type="number"], form select {
+	display: block;
+	margin-bottom: 20px;
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: none;
+	background-color: #f7f7f7;
+	width: 100%;
+}
+
+form button {
+	display: block;
+	margin: 0 auto;
+	padding: 10px 20px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: none;
+	background-color: #333;
+	color: white;
+}
+#unhealthy{
+	padding: 5vh 2vw;
+}
+#healthy{
+	padding: 5vh 2vw;
+}
+footer{
+	position: fixed;
+
+}
+
+</style>
+</head>
+<body>
+	<header>
+		<h1>Early-Stage Diabetes Prediction</h1>
+		<nav>
+			<ul>
+				<li><a href="{% url 'home' %}">Home</a></li>
+				<li><a href="{% url 'about' %}">About</a></li>
+				<li><a href="{% url 'contact' %}">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	{%if msg == 0%}
+    <div id="healthy">
+		<div class="title">
+			You Probably do not have diabetes
+		</div>
+		<div class="desc">
+			Continue having a healthy lifestyle
+		</div>
+	</div>
+	{%endif%}
+	{%if msg == 1%}
+	<div id="unhealthy">
+		<div class="title">
+			You probably have diabetes
+		</div>
+		<div class="desc">
+			Please consider consulting a Doctor as soon as possible!
+		</div> 
+	</div>
+	{%endif%}
+</body>
+</html>
