@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malittus - Realy Stage Diabetes Detector</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main/home.css' %}">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div id="logo-title">
+                <div id="logo">
+                    <img src="{% static 'main/images/logo.png' %}">
+                </div>
+                <div id="title">
+                    Mallitus
+                </div>
+            </div>
+            <div id="nav-items">
+                <div class="nav-item">
+                    <button>
+                        <a href="{% url 'about' %}">
+                            About
+                        </a>
+                    </button>
+                </div>
+                <div class="nav-item">
+                    <button>
+                        <a href="{% url 'contact' %}">
+                            Contacts
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div id="info-img">
+            <div id="info">
+                <div id="heads">
+                    Early-Stage Diabetes Prediction
+                </div>
+                <div id="captions">
+                    We use machine learning algorithms to predict whether a person is likely to develop diabetes based on their medical history and lifestyle factors.
+                </div>
+                <div id="get-started">
+                    <button>
+                        <a href="{% url 'home' %}">
+                            Get Started
+                        </a>
+                        
+                    </button>
+                </div>
+            </div>
+            <div id="img">
+                <img src="{% static 'main/images/desc.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

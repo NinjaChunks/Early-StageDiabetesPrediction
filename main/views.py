@@ -6,7 +6,7 @@ import numpy as np
 from sklearn.tree import DecisionTreeClassifier
 
 # load the diabetes dataset
-df = pd.read_csv("C:/Users/Windows/Desktop/esdp/main/datatset/diabetes.csv")
+df = pd.read_csv("C:/Users/t19th/OneDrive/Documents/Documents/NinjaChunks/Early-StageDiabetesPrediction/main/datatset/diabetes.csv")
 
 # prepare the input features (drop the Outcome column)
 X = df.drop(['Outcome'], axis=1)
@@ -18,6 +18,8 @@ y = df.Outcome
 model = DecisionTreeClassifier(criterion="entropy", max_depth=6)
 model = model.fit(X, y)
 
+def index(request):
+    return render(request, "home.html")
 
 def home(request):
     

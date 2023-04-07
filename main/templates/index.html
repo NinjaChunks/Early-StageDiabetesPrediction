@@ -17,7 +17,11 @@ nav{
 	justify-content: space-between;
 	padding: 3vh 3vw;
 	color: white;
-	background: linear-gradient(90deg, #333, #6b6b6b);
+	background: #333;
+         
+}
+nav:hover{
+	background-position: right center;
 }
 a{
 	text-decoration: none;
@@ -73,9 +77,51 @@ form button {
 footer {
 	padding: 0 1vw;
 }
+#hamburger{
+	display: none;
+	z-index: 2;
+}
+#navbar-conatiner{
+	display: none;
+}
+
+
+@media screen and (max-width: 500px) {
+	#nav-items{
+		display: none;
+	}
+	span{
+		display: block;
+		width: 30px;
+		height: 4px;
+		margin-bottom: 6px;
+		position: relative;
+		background: #333;
+		border-radius: 4px;
+
+	}
+	#hamburger{
+		display: block;
+	}
+	#navbar-container{
+		display: block;
+		position: absolute;
+		background: white;
+		z-index: 1;
+		padding: 60px 20px;
+		transform: translateX(100vw);
+		width: 100%;
+	}
+}
 	</style>
 </head>
 <body>
+	<div id="navbar-container">
+		<div>Home</div>
+		<span></span>
+		<div>About</div>
+		<div>Contacts</div>
+	</div>
 	<nav>
 		<div id="title">
 			Early-Stage Diabetes Prediction
@@ -90,6 +136,19 @@ footer {
 			<div class="nav-item">
 				<a href="{% url 'contact' %}">Contact</a>
 			</div>
+		</div>
+		<div id="hamburger">
+			<button onclick="evens()">
+				<div>
+					<span></span>
+				</div>
+				<div>
+					<span></span>
+				</div>
+				<div>
+					<span></span>
+				</div>
+			</button>
 		</div>
 	</nav>
 	<main>
@@ -121,5 +180,19 @@ footer {
 	<footer>
 		<p>&copy; 2023 Early-Stage Diabetes Prediction</p>
 	</footer>
+	<script>
+		let ham = document.getElementById("navbar-container");
+		let x = 0
+		function evens() {
+			if (x%2){
+				ham.style.transform = "translateX(70vw)";
+				x +=1;
+			}
+			else{
+				ham.style.transform = "translateX(100vw)";
+				x +=1;
+			}
+		}
+	</script>
 </body>
 </html>
